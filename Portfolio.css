@@ -1,0 +1,361 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #0A192F;
+    font-family: 'Roboto Mono', monospace;
+
+    cursor: crosshair;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*------------------------------------------------------------------------------------------------------
+-------------------------------------------------navigation Styling-------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+.Portfolio_navbar {
+    width: 100%;
+    height: 100px;
+
+    padding: 0px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: rgb(10, 24, 46, 0.9);
+    box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lotteAnimation a {
+    text-decoration: none;
+    cursor: grab;
+}
+
+.lotteAnimation a img {
+    width: 40px;
+}
+
+
+.Links {
+    display: flex;
+}
+
+.section_Link {
+    color: hsl(225, 20%, 71%);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 14px;
+    transition: .2s all ease-in-out;
+
+    cursor: grab;
+}
+
+.section_Link:hover {
+    transition: .2s all ease-in-out;
+    color: #64FFDA;
+}
+
+.section_Link span {
+    color: #64FFDA;
+    padding: 0 5px 0 0;
+}
+
+.resume a {
+    color: #64FFDA;
+    text-decoration: none;
+    padding: 8px 20px;
+    margin-left: 30px;
+    font-size: 14px;
+
+    border: 1px solid #64FFDA;
+    border-radius: 5px;
+}
+
+.resume a:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+/*------------------------------------------------------------------------------------------------------
+----------------------------------------navigation Styling Ends here-------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 100px 50px;
+    scroll-snap-align: start;
+}
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+
+/*------------------------------------------------------------------------------------------------------
+------------------------------------------Home Styling Ends here----------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+.Home_Content {
+    width: 1000px;
+    max-width: 100%;
+    padding: 0px 50px;
+    margin: 80px auto;
+}
+
+.Home_Content span {
+    color: #64FFDA;
+}
+
+.Home_Content h1 {
+    color: #CCD6F6;
+    font-weight: 600;
+    margin: 15px 0 0 0;
+    font-size: 6vw;
+}
+
+.Home_Content h2 {
+    color: #8892B0;
+    font-weight: 600;
+    margin: 10px 0 0px 0;
+    font-size: 3.9vw;
+}
+
+.Home_Content p {
+    width: 450px;
+    font-size: 18px;
+    color: #808BA8;
+    margin: 20px 0 40px 0;
+}
+
+.Home_Content button {
+    padding: 10px 40px;
+    font-size: 18px;
+    background-color: transparent;
+    color: #64FFDA;
+    border: 1px solid #64FFDA;
+
+    border-radius: 5px;
+    transition: .3s all ease-in-out;
+}
+
+.Home_Content button:hover {
+    transition: .3s all ease-in-out;
+
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: scale(0.99);
+    /* font-weight: 600; */
+}
+
+/*-------------------------------------------------------------------------------------------------------
+------------------------------------------Home Styling Ends here-----------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------------------------------------------
+----------------------------------------Social Media Styling here---------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+.social_Media_links {
+    position: fixed;
+
+    bottom: 0;
+    left: 55px;
+}
+
+.social_Media_links a {
+    text-decoration: none;
+    margin: 30px 0px;
+    display: block;
+    cursor: grab;
+}
+
+svg {
+    width: 22px;
+    fill: none;
+    stroke: #CCD6F6;
+    transition: .2s all ease-in-out;
+}
+
+svg:hover {
+    stroke: #64FFDA;
+    transform: translateY(-4px);
+    transition: .2s all ease-in-out;
+}
+
+.Line {
+    width: 1.5px;
+    height: 100px;
+    margin: 30px auto 0 auto;
+    background-color: #CCD6F6;
+}
+
+/*------------------------------------------------------------------------------------------------------
+----------------------------------------Social Media Styling Ends here-------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+
+.email_me {
+    position: fixed;
+
+    bottom: 0;
+    right: -40px;
+}
+
+.email_me a {
+    color: #8892B0;
+    text-decoration: none;
+    transition: .2s all ease-in-out;
+    cursor: grab;
+    position: relative;
+    top: 0;
+}
+
+.email_me div:first-child {
+    transform: rotateZ(90deg);
+    position: relative;
+    top: -100px;
+}
+
+.email_me a:hover {
+    color: #64FFDA;
+    transition: .2s all ease-in-out;
+
+    top: -4px;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------------
+----------------------------------------Fade Animation Ends here-------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+        transform: translate3d(0, -10px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.About {
+    animation: fadeInDown .2s ease-in;
+}
+
+.Projects {
+    animation: fadeInDown .35s ease-in;
+}
+
+.Creative_Section {
+    animation: fadeInDown .5s ease-in;
+}
+
+.Contact {
+    animation: fadeInDown .65s ease-in;
+}
+
+.resume {
+    animation: fadeInDown .8s ease-in;
+}
+
+
+
+
+
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.Home_Content span {
+    animation: fadeInUp 1.3s ease-in;
+}
+
+.Home_Content h1 {
+    animation: fadeInUp 1.5s ease-in;
+
+}
+
+.Home_Content h2 {
+    animation: fadeInUp 1.7s ease-in;
+
+}
+
+.Home_Content p {
+    animation: fadeInUp 1.9s ease-in;
+
+}
+
+.Home_Content button {
+    animation: fadeInUp 2s ease-in;
+
+}
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.social_Media_links {
+    animation: fadeIn 2.3s ease-in;
+}
+
+.email_me {
+    animation: fadeIn 2.3s ease-in;
+}
