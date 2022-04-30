@@ -2,6 +2,11 @@
     display: none;
 }
 
+:root {
+    --seconds: .6s all ease-in-out;
+    --width: 48.5%;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 * {
@@ -48,6 +53,7 @@ p {
 
     background-color: rgb(10, 24, 46, 0.9);
     box-shadow: 0px 1px 15px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .lotteAnimation a {
@@ -57,6 +63,12 @@ p {
 
 .lotteAnimation a img {
     width: 40px;
+    transition: .3s all ease-in-out;
+}
+
+.lotteAnimation a img:hover {
+    transition: .3s all ease-in-out;
+    transform: scale(1.05);
 }
 
 
@@ -105,7 +117,6 @@ p {
 section {
     width: 100%;
     height: 100vh;
-    padding: 100px 50px;
     scroll-snap-align: start;
 }
 
@@ -117,13 +128,14 @@ main {
 
 
 /*------------------------------------------------------------------------------------------------------
-------------------------------------------Home Styling Ends here----------------------------------------
+---------------------------------------------Home Styling here-------------------------------------------
 --------------------------------------------------------------------------------------------------------*/
 .Home_Content {
     width: 1000px;
     max-width: 100%;
-    padding: 0px 50px;
-    margin: 80px auto;
+    margin: 0px auto;
+    padding: 170px 0 0 0;
+    position: relative;
 }
 
 .Home_Content span {
@@ -167,11 +179,93 @@ main {
 
     background-color: rgba(100, 255, 218, 0.1);
     transform: scale(0.99);
-    /* font-weight: 600; */
 }
 
 /*-------------------------------------------------------------------------------------------------------
 ------------------------------------------Home Styling Ends here-----------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+
+
+
+
+/*-------------------------------------------------------------------------------------------------------
+--------------------------------------------About Styling here-------------------------------------------
+--------------------------------------------------------------------------------------------------------*/
+#about {
+    padding: 160px 0 0 0;
+}
+
+.AboutWrapper {
+    width: 1000px;
+    height: 550px;
+    margin: 0px auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.mainStyling {
+
+    width: var(--width);
+    transition: var(--seconds);
+
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border-radius: 10px;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: crosshair;
+}
+
+.bg_color {
+    background: transparent;
+    box-shadow: 0 0px 15px rgba(255, 255, 255, 0.09);
+}
+
+.active {
+    font-size: inherit;
+}
+
+.BoxWrapper {
+    width: 100%;
+    height: 260px;
+
+    display: flex;
+    justify-content: space-between;
+    transition: var(--seconds);
+}
+
+
+/* Workings Adjustment */
+.addTo_BigWrapper {
+    transition: var(--seconds);
+    height: 400px;
+}
+
+.addTo_SmallWrapper {
+    transition: var(--seconds);
+    height: 130px;
+}
+
+.to_small_Box {
+    transition: var(--seconds);
+    width: 15%;
+}
+
+.to_big_box {
+    transition: var(--seconds);
+    width: 83%;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+--------------------------------------------About Styling Ends here-------------------------------------
 --------------------------------------------------------------------------------------------------------*/
 
 
@@ -195,7 +289,7 @@ main {
 svg {
     width: 22px;
     fill: none;
-    stroke: #CCD6F6;
+    stroke: hsl(225, 10%, 60%);
     transition: .2s all ease-in-out;
 }
 
@@ -241,7 +335,6 @@ svg:hover {
 .email_me a:hover {
     color: #64FFDA;
     transition: .2s all ease-in-out;
-
     top: -4px;
 }
 
@@ -249,7 +342,23 @@ svg:hover {
 
 /*------------------------------------------------------------------------------------------------------
 ----------------------------------------Fade Animation Ends here-------------------------------------
---------------------------------------------------------------------------------------------------------*/
+/* --------------------------------------------------------------------------------------------------------*/
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.lotteAnimation {
+    animation: fadeIn 1s ease-in;
+}
+
+
 @keyframes fadeInDown {
     0% {
         opacity: 0;
@@ -257,7 +366,7 @@ svg:hover {
 
     50% {
         opacity: 0;
-        transform: translate3d(0, -10px, 0);
+        transform: translateY(-40px);
     }
 
     100% {
