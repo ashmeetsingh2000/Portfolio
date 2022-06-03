@@ -61,17 +61,47 @@ h1 {
     z-index: 10;
 }
 
+
+
 .lotteAnimation a {
     text-decoration: none;
     cursor: grab;
 }
 
-.lotteAnimation a img {
-    width: 40px;
+.logo_Border {
+    height: 50px;
+    width: 48px;
+    background: #62FAD7;
+    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     transition: .3s all ease-in-out;
 }
 
-.lotteAnimation a img:hover {
+.logo_Inner {
+    height: 45px;
+    width: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0A192F;
+    color: #62FAD7;
+    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.logo_Inner h1 {
+    font-size: 25px !important;
+    position: relative;
+    top: -1px;
+}
+
+.logo_Border:hover {
     transition: .3s all ease-in-out;
     transform: scale(1.05);
 }
