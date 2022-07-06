@@ -6,6 +6,7 @@
     --seconds: .6s all ease-in-out;
     --width: 48.5%;
     --Ligh_Blue: #64FFDA;
+    --heading: #CCD6F6;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
@@ -69,8 +70,8 @@ h1 {
 }
 
 .logo_Border {
-    height: 50px;
-    width: 48px;
+    height: 45px;
+    width: 43px;
     background: #62FAD7;
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
@@ -83,8 +84,8 @@ h1 {
 }
 
 .logo_Inner {
-    height: 45px;
-    width: 43px;
+    height: 40px;
+    width: 37px;
 
     display: flex;
     justify-content: center;
@@ -96,7 +97,8 @@ h1 {
 }
 
 .logo_Inner h1 {
-    font-size: 25px !important;
+    font-size: 22px !important;
+    font-weight: 600;
     position: relative;
     top: -1px;
 }
@@ -178,7 +180,7 @@ main {
 }
 
 .Home_Content h1 {
-    color: #CCD6F6;
+    color: var(--heading);
     font-weight: 600;
     margin: 15px 0 0 0;
 }
@@ -254,6 +256,15 @@ main {
 
     overflow: hidden;
     padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.open_BoxStyling {
+    display: block;
 }
 
 .bg_color {
@@ -302,9 +313,28 @@ main {
 
 
 .SVG_show {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
+    position: relative;
+    top: 15px;
+    left: 20px;
 }
+
+.mainStyling h2 {
+    display: inline-block;
+    color: var(--heading);
+    position: relative;
+    top: -12px;
+    left: -20px;
+}
+
+.paragraph_styling {
+    display: none;
+    font-size: 16.6px;
+    color: hsl(224, 19%, 78%);
+}
+
+
 
 /*-------------------------------------------------------------------------------------------------------
 --------------------------------------------About Styling Ends here-------------------------------------
@@ -475,6 +505,11 @@ main {
 .lotteAnimation {
     animation: fadeIn 1s ease-in;
 }
+
+
+
+
+
 
 
 @keyframes fadeInDown {
